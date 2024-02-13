@@ -1,10 +1,17 @@
-function App() {
-
+function MyButton() {
   return (
-      <div className = "App">
-      Blog It!
-      </div>
-  )
+    <button style = {{color: 'blue'}}>
+      Login
+    </button>
+  ) ;
 }
 
-export default App
+export default function MyApp() {
+  return (
+      <div>
+        <h1>Blog It!</h1>
+        <MyButton/>
+      </div>
+  ) ;
+}
+
