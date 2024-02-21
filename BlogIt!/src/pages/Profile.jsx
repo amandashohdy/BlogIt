@@ -19,11 +19,31 @@ function ProfileHeader() {
   ) ;
 }
 
+function Dates() {
+  return (
+    <div className = "Dates">
+      Dec 02: Title...<br />
+      Nov 04: Title...<br />
+      Oct 20: Title...<br />
+      Sep 24: Title...<br />
+      Aug 08: Title...<br />
+      July  19: Title...<br />
+      Jun 09: Title...<br />
+      May 09: Title...<br />
+      Apr  16: Title...<br />
+      Mar 01: Title...<br />
+      Feb 04: Title...<br />
+      Jan 09: Title...<br />
+    </div>
+  )
+}
+
 function Profile() {
   return (
     <div>
       <Logout/>
       <ProfileHeader/>
+      <Dates/>
     </div>
   )
 }

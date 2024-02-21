@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom' ;
 
-function MyButton() {
+{/* Login Button */}
+function LoginButton() {
   return (
     <button style = {{color: 'blue'}}>
       <Link to="/profile"> Login </Link>
@@ -12,7 +13,7 @@ export default function Login() {
   return (
       <div classname="Login">
         <h1>Blog It!</h1>
-        <MyButton/>
+        <LoginButton/>
       </div>
   ) ;
 }
