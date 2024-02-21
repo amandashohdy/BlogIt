@@ -1,5 +1,6 @@
 import React from "react" ; 
 import {createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider} from "react-router-dom" ;
+import "./App.css" ; 
 
 import Login from "./pages/Login" ;
 import Profile from "./pages/Profile" ; 
@@ -25,9 +26,9 @@ export default function App() {
 const Root = () => {
   return (
     <> 
-      <div> 
-        <Link to="/"> Login </Link> 
-        <Link to="/profile"> Profile </Link> 
+      <div> {/* This shows the navigation bar up top */}
+        {/*<Link to="/"> Login </Link>
+        <Link to="/profile"> Profile </Link></>*/}
       </div> 
 
       <div>

@@ -1,7 +1,9 @@
+import {Link} from 'react-router-dom' ;
+
 function MyButton() {
   return (
     <button style = {{color: 'blue'}}>
-      Login
+      <Link to="/profile"> Login </Link>
     </button>
   ) ;
 }
