@@ -26,10 +26,10 @@ export default function App() {
 const Root = () => {
   return (
     <> 
-      <div> {/* This shows the navigation bar up top */}
-        {/*<Link to="/"> Login </Link>
-        <Link to="/profile"> Profile </Link></>*/}
-      </div> 
+  {/* <div> This shows the navigation bar up top 
+        <Link to="/"> Login </Link>
+        <Link to="/profile"> Profile </Link></>
+      </div> */}
 
       <div>
         <Outlet/>
