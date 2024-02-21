@@ -10,7 +10,7 @@ function MyButton() {
 
 export default function Login() {
   return (
-      <div>
+      <div classname="Login">
         <h1>Blog It!</h1>
         <MyButton/>
       </div>

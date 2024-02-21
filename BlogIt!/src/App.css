@@ -3,3 +3,14 @@
     padding: 40px ; 
     color: black
 }
+
+.ProfileHeader {
+    background-color: lightblue ;
+    color: black;
+    padding: 20px ; 
+}
+
+.Logout { 
+    margin: 10px ;
+    float: right ;
+}
