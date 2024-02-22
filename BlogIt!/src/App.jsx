@@ -29,7 +29,7 @@ const Root = () => {
   {/* <div> This shows the navigation bar up top 
         <Link to="/"> Login </Link>
         <Link to="/profile"> Profile </Link></>
-      </div> */}
+      </div>                                      */}
 
       <div>
         <Outlet/>
