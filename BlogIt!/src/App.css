@@ -1,26 +1,26 @@
-.App {
-    background-color: white ;
-    padding: 40px ; 
-    color: black
-}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-.ProfileHeader {
-    background-color: rgba(0, 153, 255, 0.69) ;
-    color: black;
-    padding: 20px ; 
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+} 
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
 
-.Logout { 
-    margin: 10px ;
-    float: right ;
-}
 
-.Dates {
-    width: 100px ; 
-    height: 400px ; 
-    background-color: rgba(0, 153, 255, 0.3) ;
-    margin: left ; 
-    padding: 20px ; 
-    font-size: medium;
-    line-height: 1.5 ;
-}

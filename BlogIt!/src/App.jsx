@@ -2,15 +2,15 @@ import React from "react" ;
 import {createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider} from "react-router-dom" ;
 import "./App.css" ; 
 
-import Login from "./pages/Login" ;
-import Profile from "./pages/Profile" ; 
+import LoginForm from "./pages/LoginForm/LoginForm" ;
+import Profile from "./pages/Profile/Profile" ; 
 
 export default function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root/>}>
-        <Route index element={<Login/>}/>
+        <Route index element={<LoginForm/>}/>
         <Route path="/profile" element={<Profile/>}/>
       </Route>
     )
