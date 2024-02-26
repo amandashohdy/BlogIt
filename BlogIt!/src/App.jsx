@@ -1,17 +1,39 @@
-function MyButton() {
+import React from "react" ; 
+import {createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider} from "react-router-dom" ;
+import "./App.css" ; 
+
+import LoginForm from "./pages/LoginForm/LoginForm" ;
+import Profile from "./pages/Profile/Profile" ; 
+
+export default function App() {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root/>}>
+        <Route index element={<LoginForm/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+      </Route>
+    )
+  )
+
   return (
-    <button style = {{color: 'blue'}}>
-      Login
-    </button>
-  ) ;
+    <div>
+      <RouterProvider router={router}/>
+    </div>
+  )
 }
 
-export default function MyApp() {
+const Root = () => {
   return (
+    <> 
+  {/* <div> This shows the navigation bar up top 
+        <Link to="/"> Login </Link>
+        <Link to="/profile"> Profile </Link></>
+      </div>                                      */}
+
       <div>
-        <h1>Blog It!</h1>
-        <MyButton/>
+        <Outlet/>
       </div>
-  ) ;
+    </>
+  )
 }
-

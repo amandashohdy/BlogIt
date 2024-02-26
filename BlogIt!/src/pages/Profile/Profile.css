@@ -1,0 +1,11 @@
+.ProfileHeader {
+    position: fixed;
+    top: 20px ;
+    left: 20px ;
+}
+
+.Logout {
+    position: fixed ; 
+    top: 10px ; 
+    right: 10px ; 
+}
