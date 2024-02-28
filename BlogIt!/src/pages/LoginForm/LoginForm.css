@@ -62,7 +62,7 @@
     text-decoration: underline;
 }
 
-.wrapper button {
+.Login {
     width: 100%;
     height: 50px;
     background-color: whitesmoke;
@@ -70,7 +70,7 @@
     border-radius: 40px;
     border: 1px solid gray;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -78,4 +78,15 @@
     font-size: 12px; 
     text-align: center;
     margin-top: 20px;
+}
+
+.RegisterButton {
+    border: none ; 
+    background-color: white ;
+}
+
+.ForgotPassword {
+    border: none ; 
+    background-color: white ;
+    font-size: 12px ; 
 }
