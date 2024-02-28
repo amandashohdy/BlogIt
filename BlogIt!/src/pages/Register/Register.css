@@ -1,0 +1,11 @@
+.SignUp {
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 40px;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+}
