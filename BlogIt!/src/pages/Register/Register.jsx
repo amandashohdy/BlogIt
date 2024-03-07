@@ -3,6 +3,7 @@ import "./Register.css" ;
 import { CiUser } from "react-icons/ci" ;
 import { CiLock } from "react-icons/ci" ; 
 import { CiMail } from "react-icons/ci";
+import { CiDesktop } from "react-icons/ci";
 import { Link } from 'react-router-dom' ;
 
 function SignUp() {
@@ -32,6 +33,11 @@ const Register = () => {
           <div className="input-box">
               <input type="password" placeholder="Password" required></input>
               <CiLock className='icon'/>
+          </div>
+
+          <div className="input-box">
+              <input type="text" placeholder="Display Name" required></input>
+              <CiDesktop className='icon'/>
           </div>
 
           <div>
