@@ -2,15 +2,10 @@ import React from 'react'
 import './LoginForm.css'
 import { CiUser } from "react-icons/ci" ;
 import { CiLock } from "react-icons/ci" ; 
-import { Link } from 'react-router-dom' ;
+import { Link, useNavigate } from 'react-router-dom' ;
+import { useContext, useState } from "react" ; 
+import { AuthContext } from "../../context/authContext" ; 
 
-function Login() {
-  return (
-    <button className="Login">
-        <Link to="/profile"> Login </Link>
-    </button>
-  ) ;
-}
 
 function RegisterButton() {
   return (
@@ -29,17 +24,39 @@ function ForgotPassword() {
 }
 
 const LoginForm = () => {
+
+  const [inputs, setInputs] = useState({
+    username:"",
+    password:"",
+  }) ;
+
+  const [err, setErr] = useState(null) ;
+
+  const handleChange = (e) => {
+    setInputs((prev) => ({...prev, [e.target.name]: e.target.value})) ;
+  } ;
+  const { login } = useContext(AuthContext) ; 
+
+  const handleLogin = async (e) => {
+    e.preventDefault() ;
+    try {
+      await login(inputs) ;
+    } catch (err) {
+      setErr(err) ;
+    }
+  } ;
+
   return (
     <div className='wrapper'>
       <form action="">
           <h1>Blog It!</h1>
           <div className="input-box">
-              <input type="text" placeholder="Username" required></input>
+              <input type="text" placeholder="Username" name="username" onChange={handleChange}></input>
               <CiUser className='icon'/>
           </div>
 
           <div className="input-box">
-              <input type="password" placeholder="Password" required></input>
+              <input type="password" placeholder="Password" name="password" onChange={handleChange}></input>
               <CiLock className='icon'/>
           </div>
 
@@ -48,9 +65,10 @@ const LoginForm = () => {
             <ForgotPassword/>
           </div>
 
-          <div>
-            <Login/>
-          </div>
+          {/* err && err */}
+          <button className="Login" onClick={handleLogin}>
+            Login
+          </button>
 
           <div className="register-link">
               Don't have an account? <RegisterButton/>
