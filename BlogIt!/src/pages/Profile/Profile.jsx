@@ -1,15 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router-dom' ; 
+import {Link, useNavigate} from 'react-router-dom' ; 
 import "./Profile.css" ;
 
-{/* Button to return to the login page */}
-function Logout() {
-  return (
-      <button className="Logout" style = {{color: 'blue'}}>
-        <Link to="/"> Logout </Link>
-    </button>
-  ) ;
-}
 
 function ProfileHeader() {
   return (
@@ -21,13 +13,25 @@ function ProfileHeader() {
   ) ;
 }
 
-function Profile() {
+const Profile = () => {
+
+  const navigate = useNavigate() ; 
+
+  const handleLogout = async (e) => {
+      e.preventDefault() ;
+      window.localStorage.clear() ;
+      navigate("/") 
+    } ;
+
   return (
     <div>
-      <Logout/>
+      <button className="Logout" onClick={handleLogout}>
+        Logout
+      </button>
       <ProfileHeader/>
     </div>
   )
 }
+
 
 export default Profile ; 

@@ -36,13 +36,13 @@ export default function App() {
         <Route path="/forgot_password" element={<ForgotPassword/>} />
       </Route>
     )
-  )
+    )
 
   return (
     <div>
       <RouterProvider router={router}/>
     </div>
-  )
+  ) ;
 }
 
 const Root = () => {

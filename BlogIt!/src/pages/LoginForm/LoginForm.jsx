@@ -32,6 +32,8 @@ const LoginForm = () => {
 
   const [err, setErr] = useState(null) ;
 
+  const navigate = useNavigate() 
+
   const handleChange = (e) => {
     setInputs((prev) => ({...prev, [e.target.name]: e.target.value})) ;
   } ;
@@ -41,10 +43,13 @@ const LoginForm = () => {
     e.preventDefault() ;
     try {
       await login(inputs) ;
+      navigate("/profile") 
     } catch (err) {
-      setErr(err) ;
+      setErr(err.response.data) ;
     }
   } ;
+
+  console.log(err) ; 
 
   return (
     <div className='wrapper'>
