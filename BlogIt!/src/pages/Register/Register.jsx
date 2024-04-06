@@ -1,6 +1,6 @@
 import React from 'react' ;
 import "./Register.css" ;
-import { useState } from "react" ;
+import { useState, useNavigate } from "react" ;
 import axios from "axios" ; 
 import { CiUser } from "react-icons/ci" ;
 import { CiLock } from "react-icons/ci" ; 
@@ -18,7 +18,7 @@ const Register = () => {
     display_name:"",
   }) ;
 
-  const [err, setErr] = useState(null) ;
+  const navigate = useNavigate() ; 
 
   const handleChange = (e) => {
     setInputs((prev) => ({...prev, [e.target.name]: e.target.value})) ;
@@ -29,6 +29,7 @@ const Register = () => {
 
     try {
       await axios.post("http://localhost:8800/api/auth/register", inputs) ;
+      navigate("/profile") ;
     } catch(err) {
       setErr(err.response.data) ; 
     }

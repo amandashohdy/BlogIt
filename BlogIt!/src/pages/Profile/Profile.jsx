@@ -1,5 +1,9 @@
 import React from 'react'
-import {Link, useNavigate} from 'react-router-dom' ; 
+import { useState } from "react" ; 
+import { useLocation, useNavigate} from 'react-router-dom' ; 
+import { makeRequest } from "../../axios" ; 
+import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query" ;
+import axios from "axios" ; 
 import "./Profile.css" ;
 
 
@@ -15,12 +19,21 @@ function ProfileHeader() {
 
 const Profile = () => {
 
+  {/*const userID = useLocation().pathname.split("/")[2] 
+
+  const { isLoading, error, data } = useQuery(["user"], () =>
+  makeRequest.get("/users/find" + userID).then((res) => { 
+    return res.data ; 
+  })
+) ;*/}
+
   const navigate = useNavigate() ; 
 
   const handleLogout = async (e) => {
-      e.preventDefault() ;
       window.localStorage.clear() ;
-      navigate("/") 
+      e.preventDefault() ;
+      await axios.post('http://localhost:8800/api/auth/logout', { } , { withCredentials: true }) ;
+      navigate("/") ;  
     } ;
 
   return (

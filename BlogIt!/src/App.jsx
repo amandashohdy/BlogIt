@@ -9,6 +9,7 @@ import { createBrowserRouter,
 import { AuthContext } from "./context/authContext" ;
 import { useContext } from "react" ;  
 import "./App.css" ; 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query" ;
 
 import LoginForm from "./pages/LoginForm/LoginForm" ;
 import Profile from "./pages/Profile/Profile" ; 
@@ -36,23 +37,21 @@ export default function App() {
         <Route path="/forgot_password" element={<ForgotPassword/>} />
       </Route>
     )
-    )
+  )
+
+  const queryClient = new QueryClient() 
 
   return (
-    <div>
-      <RouterProvider router={router}/>
-    </div>
+    
+      <div>
+        <RouterProvider router={router}/>
+      </div>
   ) ;
 }
 
 const Root = () => {
   return (
     <> 
-  {/* <div> This shows the navigation bar up top 
-        <Link to="/"> Login </Link>
-        <Link to="/profile"> Profile </Link></>
-      </div>                                      */}
-
       <div>
         <Outlet/>
       </div>
