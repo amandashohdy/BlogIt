@@ -19,14 +19,6 @@ function ProfileHeader() {
 
 const Profile = () => {
 
-  {/*const userID = useLocation().pathname.split("/")[2] 
-
-  const { isLoading, error, data } = useQuery(["user"], () =>
-  makeRequest.get("/users/find" + userID).then((res) => { 
-    return res.data ; 
-  })
-) ;*/}
-
   const navigate = useNavigate() ; 
 
   const handleLogout = async (e) => {
