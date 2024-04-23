@@ -39,8 +39,6 @@ export default function App() {
     )
   )
 
-  const queryClient = new QueryClient() 
-
   return (
     
       <div>
