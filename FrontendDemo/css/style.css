@@ -169,6 +169,22 @@ body{
     transition: all ease 0.3s ; 
 }
 
+.edit-post{
+    display: flex ;
+    justify-content: left ; 
+    align-items: left ;
+    font-size: 10px ; 
+    padding: 3px ;
+    margin: 5px ;
+    border: 1px solid rgba(0, 0, 0, 0.05) ;
+    border-radius: 20px ;
+}
+
+.edit-post:hover{
+    color: #f33c3c ; 
+    transition: all ease 0.3s ; 
+}
+
 @media(max-width: 1250px){
     .blog-box{
         width: 300px ;
