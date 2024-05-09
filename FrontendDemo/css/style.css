@@ -21,12 +21,65 @@ body{
 
 /*--blog-----------------------------*/
 #blog{
-    display: flex ; 
+    /*display: flex ; 
     justify-content: center ;
-    align-items: center ;
+    align-items: center ;*/
     flex-direction: column ; 
     padding: 40px ;
     border-bottom: 2px solid rgb(0, 0, 0, 0.05) ; 
+}
+
+.nav-bar{
+    display: flex ; 
+    justify-content: right ;
+    align-items: right ;
+}
+
+.create-post{
+    display: flex ;
+    justify-content: right ; 
+    align-items: right ;
+    padding: 10px ;
+    margin: 5px ; 
+    border: 1px solid #f33c3c ; 
+    background: #f88e8e ;
+    border-radius: 20px ;    
+}
+
+.create-post:hover{
+    color: #fcfcfc ; 
+    background: #f33c3c ;
+    transition: all ease 0.3s ; 
+}
+
+.edit{
+    display: flex ;
+    justify-content: right ; 
+    align-items: right ;
+    padding: 10px ;
+    margin: 5px ;
+    border: 1px solid rgba(0, 0, 0, 0.05) ;
+    border-radius: 20px ;
+}
+
+.edit:hover{
+    color: #f33c3c ; 
+    transition: all ease 0.3s ; 
+}
+
+.logout{
+    display: flex ;
+    justify-content: right ; 
+    align-items: right ;
+    padding: 10px ;
+    margin: 5px ;
+    border: 1px solid rgba(0, 0, 0, 0.05) ;
+    border-radius: 20px ;
+}
+
+.logout:hover{
+    color: #f33c3c ; 
+    transition: all ease 0.3s ; 
 }
 
 .blog-heading{
